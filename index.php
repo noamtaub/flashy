@@ -105,3 +105,16 @@ function findAll(){
         print_r($e->getMessage());
     }
 }
+
+
+function getDataFiltered(){
+    $db = new JsonDatabase();
+
+    try {
+        $tableData = $db->findAll('users');
+        $dataFilter = new DataFilter($tableData);
+        echo $dataFilter->getDataByCol(['id', 'name']);
+    }catch (Exception $e) {
+        print_r($e->getMessage());
+    }
+}
