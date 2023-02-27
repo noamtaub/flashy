@@ -1,4 +1,4 @@
-# flashy
+# Flashy
 
  A task for Flashy company.
  
