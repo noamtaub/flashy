@@ -57,7 +57,7 @@ function insertMultipleRows()
         ],
     ];
     try {
-        $db->insert("users", $data);
+        $db->insertMulti("users", $data);
     } catch (Exception $e) {
         print_r($e->getMessage());
     }
@@ -120,3 +120,13 @@ function getDataFiltered(){
         print_r($e->getMessage());
     }
 }
+
+createTable();
+// failCreateTable();
+// insertOneRow();
+// insertMultipleRows();
+// updateRow();
+// deleteRow();
+// findRow();
+// findAll();
+// getDataFiltered();
